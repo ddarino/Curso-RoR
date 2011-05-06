@@ -227,3 +227,204 @@ Started GET "/advertisements" for 127.0.0.1 at 2011-05-05 22:26:39 -0300
   [1m[36mAdvertisement Load (0.5ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
 Rendered advertisements/index.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 23ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-06 08:16:22 -0300
+  Processing by HomeController#index as HTML
+ERROR: compiling _app_views_layouts_application_html_erb__1063099267_85838590_618939954 RAISED /home/curso2/ddarino-rails/Curso-RoR/app/views/layouts/application.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+');	- Esto lo agrego por devise -
+   	         ^
+Function body:           def _app_views_layouts_application_html_erb__1063099267_85838590_618939954(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>LabancaAds</title>
+  ');@output_buffer.append= ( stylesheet_link_tag :all );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+	
+');	- Esto lo agrego por devise -
+@output_buffer.safe_concat('	<p class="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+       	<p class="alert">');@output_buffer.append= ( alert );@output_buffer.safe_concat('</p>
+
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/curso2/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:436:in `_run__817746425__process_action__311748770__callbacks'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `block in action'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.4/lib/warden/manager.rb:35:in `block in call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.4/lib/warden/manager.rb:34:in `catch'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.4/lib/warden/manager.rb:34:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `block in call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/home/curso2/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/curso2/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/curso2/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered home/index.html.erb within layouts/application (143.9ms)
+Completed   in 161ms
+
+ActionView::Template::Error (/home/curso2/ddarino-rails/Curso-RoR/app/views/layouts/application.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+');	- Esto lo agrego por devise -
+   	         ^):
+    8: </head>
+    9: <body>
+    10: 	
+    11: 	<%-- Esto lo agrego por devise --%>
+    12: 	<p class="notice"><%= notice %></p>
+    13:        	<p class="alert"><%= alert %></p>
+    14: 
+  
+
+Rendered /home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+Rendered /home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.4ms)
+Rendered /home/curso2/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-06 08:17:51 -0300
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2011-05-06 08:17:58 -0300
+  Processing by AdvertisementsController#index as HTML
+  [1m[36mAdvertisement Load (1.9ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+Rendered advertisements/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 239ms (Views: 15.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/advertisements/new" for 127.0.0.1 at 2011-05-06 08:18:01 -0300
+  Processing by AdvertisementsController#new as HTML
+Rendered advertisements/_form.html.erb (208.1ms)
+Rendered advertisements/new.html.erb within layouts/application (215.5ms)
+Completed 200 OK in 240ms (Views: 223.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advertisements" for 127.0.0.1 at 2011-05-06 08:18:10 -0300
+  Processing by AdvertisementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lQLuQT86HpsGaYGOdhmrv9F+AkI5froIOGUI63Urz+w=", "advertisement"=>{"title"=>"Primero", "body"=>"Prueba !!"}, "commit"=>"Create Advertisement"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES ('Primero', 'Prueba !!', '2011-05-06 11:18:10.126409', '2011-05-06 11:18:10.126409')[0m
+Redirected to http://localhost:3000/advertisements/2
+Completed 302 Found in 258ms
+
+
+Started GET "/advertisements/2" for 127.0.0.1 at 2011-05-06 08:18:10 -0300
+  Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdvertisement Load (0.4ms)[0m  SELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = 2 LIMIT 1
+Rendered advertisements/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 46ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2011-05-06 08:18:12 -0300
+  Processing by AdvertisementsController#index as HTML
+  [1m[36mAdvertisement Load (0.6ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+Rendered advertisements/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 80ms (Views: 28.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/advertisements/2" for 127.0.0.1 at 2011-05-06 08:18:15 -0300
+  Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdvertisement Load (0.4ms)[0m  SELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = 2 LIMIT 1
+Rendered advertisements/show.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 61ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2011-05-06 08:18:16 -0300
+  Processing by AdvertisementsController#index as HTML
+  [1m[36mAdvertisement Load (0.6ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+Rendered advertisements/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 42ms (Views: 27.5ms | ActiveRecord: 0.6ms)
