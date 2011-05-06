@@ -195,3 +195,35 @@ Started GET "/advertisements" for 127.0.0.1 at 2011-05-05 22:10:00 -0300
   [1m[36mAdvertisement Load (0.5ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
 Rendered advertisements/index.html.erb within layouts/application (13.8ms)
 Completed 200 OK in 30ms (Views: 19.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 22:26:26 -0300
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2011-05-05 22:26:32 -0300
+  Processing by AdvertisementsController#index as HTML
+  [1m[36mAdvertisement Load (0.7ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+Rendered advertisements/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 188ms (Views: 53.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/advertisements/1" for 127.0.0.1 at 2011-05-05 22:26:39 -0300
+  Processing by AdvertisementsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SEObZyYqFPfFlqoXvYFxDzLI8/hw+ugRec8QRzSIinY=", "id"=>"1"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1mSELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (10.1ms)[0m  DELETE FROM "advertisements" WHERE "advertisements"."id" = 1
+Redirected to http://localhost:3000/advertisements
+Completed 302 Found in 54ms
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2011-05-05 22:26:39 -0300
+  Processing by AdvertisementsController#index as HTML
+  [1m[36mAdvertisement Load (0.5ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+Rendered advertisements/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 10.0ms | ActiveRecord: 0.5ms)
